@@ -34,7 +34,8 @@ const CustomNavbar: React.FC = () => {
             width={50}
             className="img-fluid hero-image"
           />
-          Telth UK Program
+          <span className='text-primary-blue'> Telth UK Program</span>
+          
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -44,35 +45,35 @@ const CustomNavbar: React.FC = () => {
             <Nav.Link
               as={Link}
               to="/"
-              className={location.pathname === '/' ? 'active' : ''}
+              className={`contact-link ${location.pathname === '/' ? 'active' : ''}`}
             >
               Home
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/about"
-              className={location.pathname === '/about' ? 'active' : ''}
+              className={`contact-link ${location.pathname === '/about' ? 'active' : ''}`}
             >
               About
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/program"
-              className={location.pathname === '/program' ? 'active' : ''}
+              className={`contact-link ${location.pathname === '/program' ? 'active' : ''}`}
             >
               Program Details
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/apply"
-              className={location.pathname === '/apply' ? 'active' : ''}
+              className={`contact-link ${location.pathname === '/apply' ? 'active' : ''}`}
             >
               Apply Now
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/contact"
-              className={location.pathname === '/contact' ? 'active' : ''}
+              className={`contact-link ${location.pathname === '/contact' ? 'active' : ''}`}
             >
               Contact
             </Nav.Link>

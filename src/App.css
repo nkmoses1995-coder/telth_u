@@ -1,6 +1,6 @@
 :root {
-  --primary-blue: #0B5394;
-  --secondary-teal: #17A2B8;
+  --primary-blue: #8f0b94;
+  --secondary-teal: #b81782;
   --accent-gold: #FFC107;
   --success-green: #28A745;
   --warning-orange: #FD7E14;
@@ -82,10 +82,10 @@ body {
 
 /* Cards and Components */
 .feature-card {
-  --primary: #00838d;
-  --secondary: #00acc1;
+  --primary: #8f0b94;
+  --secondary: #b81782;
   --bg-color: #ffffff;
-  --text-color: #2d3748;
+  --text-color: #000000;
   --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   position: relative;
@@ -126,6 +126,9 @@ body {
   opacity: 1;
 }
 
+.text-span {
+  margin-left: 10px;
+}
 /* Icon animation */
 .benefit-icon {
   width: 60px;
@@ -137,7 +140,8 @@ body {
   justify-content: center;
   margin: 0 auto 1rem;
   color: white;
-  font-size: 1.5rem;
+  margin-left: 10px;
+  font-size: 1.5rem; /* Adjust size */
   transition: 
     transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6),
     box-shadow 0.3s ease;
@@ -280,11 +284,11 @@ body {
 
 .btn-primary-custom:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(11, 83, 148, 0.3);
+  box-shadow: 0 6px 20px var(--primary-blue);
 }
 
 .btn-outline-primary-custom {
-  border: 2px solid var(--primary-blue);
+  border: 2px solid var(--primary-blue) !important;
   color: var(--primary-blue);
   padding: 0.75rem 2rem;
   font-weight: 600;
@@ -341,14 +345,16 @@ body {
 
 /* Navbar custom styling */
 .navbar-custom {
-  background: linear-gradient(135deg, rgba(11, 83, 148, 0.8) 0%, rgba(23, 162, 184, 0.8) 100%);
+background: #efe7f7;
+/* background: linear-gradient(135deg, #cfaeee 0%, #b47edc 50%, #8a3dba 100%); */
+  /* background: linear-gradient(135deg, rgba(11, 83, 148, 0.8) 0%, rgba(23, 162, 184, 0.8) 100%); */
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-custom.scrolled {
-  background: linear-gradient(135deg, rgba(11, 83, 148, 0.8) 0%, rgba(23, 162, 184, 0.8) 100%);
+  background: #efe7f7;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -357,6 +363,15 @@ body {
   font-size: 1.5rem;
 }
 
+.navbar .nav-link.contact-link {
+  color: black !important; 
+}
+
+.navbar .nav-link.contact-link.active {
+  color: var(--primary-blue) !important;
+}
+
+
 .navbar-nav .nav-link {
   font-weight: 500;
   margin: 0 0.5rem;
@@ -364,7 +379,7 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--accent-gold) !important;
+  color: var(--secondary-teal) !important;
 }
 
 /* Footer styling */

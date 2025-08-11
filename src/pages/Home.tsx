@@ -54,7 +54,7 @@ const Home: React.FC = () => {
                 transition={{ duration: 1 }}
                 variants={slideInLeft}
               >
-                <h1 className="display-4 fw-bold mb-4 gradient-text">
+                <h1 className="display-4 fw-bold mb-4 text-primary-blue">
                   Telth U Postgraduate Skill Upgrade Program
                 </h1>
                 <h2 className="h4 mb-4 opacity-90">
@@ -238,11 +238,11 @@ const Home: React.FC = () => {
             <Col lg={6}>
               <Card className="feature-card h-100 border-0">
                 <Card.Body className="p-4">
-                  <div className="d-flex align-items-start mb-3">
-                    <div className="benefit-icon">
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="benefit-icon me-3">
                       <Users />
                     </div>
-                    <span className="fw-bold mb-0">Target Candidates</span>
+                    <h5 className="fw-bold mb-0">Target Candidates</h5>
                   </div>
                   <ul className="list-unstyled">
                     <li className="mb-2">✓ Foreign Medical Graduates (FMGs)</li>
@@ -253,7 +253,6 @@ const Home: React.FC = () => {
                 </Card.Body>
               </Card>
             </Col>
-
             <Col lg={6}>
               <Card className="feature-card h-100 border-0">
                 <Card.Body className="p-4">
