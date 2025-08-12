@@ -10,6 +10,8 @@ import Apply from './pages/Apply';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Login from './pages/login';
+import Register from './pages/register';
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
           <Route path="/program" element={<Program />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+
         </Routes>
         <Footer />
       </div>

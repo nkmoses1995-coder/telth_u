@@ -42,7 +42,7 @@ const Program: React.FC = () => {
             <Container>
               <Row className="align-items-center g-5">
                 {/* Left: Timeline-style content */}
-                <Col lg={6}>
+                <Col lg={7}>
                   <div className="timeline">
                     <div className="timeline-item ">
                       <div className="timeline-content card1">
@@ -78,7 +78,7 @@ const Program: React.FC = () => {
                 </Col>
 
                 {/* Right: Image */}
-                <Col lg={6}>
+                <Col lg={5}>
                   <img
                     src={programmeImage}
                     alt="Telth UK Program"

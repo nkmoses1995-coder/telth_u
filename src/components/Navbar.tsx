@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { GraduationCap } from 'lucide-react';
-import logo from '../assest/logobg.png'
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { FaUserCircle } from 'react-icons/fa'; // User icon
+import logo from '../assest/logobg.png';
 
 const CustomNavbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -10,13 +10,17 @@ const CustomNavbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      setScrolled(isScrolled);
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const [show, setShow] = useState(false);
+
+  const handleMouseEnter = () => setShow(true);
+  const hanldeMouseLeave = () => setShow(false)
 
   return (
     <Navbar
@@ -26,22 +30,22 @@ const CustomNavbar: React.FC = () => {
       variant="dark"
     >
       <Container>
+        {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-          {/* <GraduationCap size={32} className="me-2" /> */}
           <img
             src={logo}
-            alt="Telth UK Program"
+            alt="Medpass"
             width={50}
             className="img-fluid hero-image"
           />
-          <span className='text-primary-blue'> Telth UK Program</span>
-          
+          <span className="text-primary-blue ms-2">Medpass</span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+          {/* Center/Right Menu */}
+          <Nav className="ms-auto align-items-center">
             <Nav.Link
               as={Link}
               to="/"
@@ -63,13 +67,13 @@ const CustomNavbar: React.FC = () => {
             >
               Program Details
             </Nav.Link>
-            <Nav.Link
+            {/* <Nav.Link
               as={Link}
               to="/apply"
               className={`contact-link ${location.pathname === '/apply' ? 'active' : ''}`}
             >
               Apply Now
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link
               as={Link}
               to="/contact"
@@ -77,6 +81,22 @@ const CustomNavbar: React.FC = () => {
             >
               Contact
             </Nav.Link>
+            <NavDropdown
+              title={<FaUserCircle size={30}/>}
+              id="user-dropdown"
+              // className="navbar-user-icon"
+              align="end"
+              show={show}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={hanldeMouseLeave}
+            >
+              <NavDropdown.Item as={Link} to="/login">
+                Sign In
+              </NavDropdown.Item>
+              {/* <NavDropdown.Item as={Link} to="/register">
+                Register
+              </NavDropdown.Item> */}
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>

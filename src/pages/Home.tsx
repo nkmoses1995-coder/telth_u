@@ -238,11 +238,11 @@ const Home: React.FC = () => {
             <Col lg={6}>
               <Card className="feature-card h-100 border-0">
                 <Card.Body className="p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="benefit-icon me-3">
+                  <div className="mb-3">
+                    <div className="benefit-icon">
                       <Users />
                     </div>
-                    <h5 className="fw-bold mb-0">Target Candidates</h5>
+                    <h5 className="fw-bold mb-0 d-flex justify-content-center">Target Candidates</h5>
                   </div>
                   <ul className="list-unstyled">
                     <li className="mb-2">✓ Foreign Medical Graduates (FMGs)</li>
@@ -256,11 +256,11 @@ const Home: React.FC = () => {
             <Col lg={6}>
               <Card className="feature-card h-100 border-0">
                 <Card.Body className="p-4">
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="benefit-icon me-3">
+                  <div className=" mb-3">
+                    <div className="benefit-icon">
                       <TrendingUp />
                     </div>
-                    <h5 className="fw-bold mb-0">Career Goals</h5>
+                    <h5 className="fw-bold mb-0 d-flex justify-content-center">Career Goals</h5>
                   </div>
                   <ul className="list-unstyled">
                     <li className="mb-2">✓ Career advancement in healthcare</li>
